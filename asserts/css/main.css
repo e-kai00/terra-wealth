@@ -50,6 +50,11 @@ p:not([class]) {
   max-width: 60ch;
 }
 
+form input,
+form textarea {
+  border-radius: 3px;
+}
+
 body {
   font-family: var(--ff-400);
   font-size: var(--fs-400);
@@ -74,6 +79,26 @@ main {
   max-width: 90vw;
   margin: 0 auto;
   padding: 1.2em;
+}
+
+.form-wrapper {
+  background-color: var(--clr-text);
+  color: var(--clr-accent);
+  padding: 3em 1.2em;
+  max-width: 370px;
+}
+.form-wrapper .intro__form > p,
+.form-wrapper .form-item span {
+  color: var(--clr-bg);
+  font-size: var(--fs-300);
+}
+.form-wrapper .form-item {
+  display: grid;
+  margin-bottom: 0.8em;
+}
+.form-wrapper .intro_socials {
+  display: flex;
+  gap: 1em;
 }
 
 .even-columns {
@@ -105,4 +130,5 @@ main {
   font-family: var(--ff-500);
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
+  line-height: 1;
 }

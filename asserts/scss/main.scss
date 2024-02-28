@@ -63,6 +63,11 @@ p:not([class]) {
   max-width: 60ch;
 }
 
+form input,
+form textarea {
+  border-radius: 3px;
+}
+
 // general styling
 
 body {
@@ -90,6 +95,36 @@ main {
   margin: 0 auto;
   padding: 1.2em;
 }
+
+// --------------------------------------------------------intro 
+.form-wrapper {
+  @include color-scheme(var(--clr-accent), var(--clr-text));
+  padding: 3em 1.2em;
+  max-width: 370px;
+
+  .intro__form > p,
+  .form-item span {
+    color: var(--clr-bg);
+    font-size: var(--fs-300);
+  }
+
+  .form-item {
+  display: grid;
+  margin-bottom: .8em;
+  }
+
+
+  
+  .intro_socials {
+    display: flex;
+    gap: 1em;
+  }
+
+
+}
+
+
+
 
 
 // utility classes
@@ -124,4 +159,5 @@ main {
   font-family: var(--ff-500);
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
+  line-height: 1;
 }
