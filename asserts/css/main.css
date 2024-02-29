@@ -55,6 +55,10 @@ form textarea {
   border-radius: 3px;
 }
 
+header {
+  margin-bottom: 5em;
+}
+
 body {
   font-family: var(--ff-400);
   font-size: var(--fs-400);
@@ -76,16 +80,52 @@ main {
 }
 
 [class*=__container] {
-  max-width: 90vw;
+  max-width: 70vw;
   margin: 0 auto;
   padding: 1.2em;
+}
+
+.intro__container .logo {
+  align-items: flex-start;
+  gap: 0.5em;
+}
+.intro__container .logo p:first-of-type {
+  position: relative;
+}
+.intro__container .logo p:first-of-type::after {
+  content: "";
+  background: var(--clr-text);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 7px;
+  width: 35px;
+}
+.intro__container .intro__contacts {
+  align-items: flex-end;
+  position: relative;
+}
+.intro__container .intro__contacts::after {
+  content: "";
+  background: var(--clr-text);
+  position: absolute;
+  top: 5em;
+  right: 0;
+  height: 7px;
+  width: 35px;
+}
+.intro__container .intro__contacts p:last-of-type {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
 }
 
 .form-wrapper {
   background-color: var(--clr-text);
   color: var(--clr-accent);
-  padding: 3em 1.2em;
+  padding: 3em 1.8em;
   max-width: 370px;
+  align-self: flex-end;
 }
 .form-wrapper .intro__form > p,
 .form-wrapper .form-item span {
@@ -131,4 +171,5 @@ main {
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
   line-height: 1;
+  letter-spacing: 2px;
 }
