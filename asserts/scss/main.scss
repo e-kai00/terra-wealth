@@ -69,7 +69,43 @@ form textarea {
 }
 
 header {
+  margin-top: 3em;
   margin-bottom: 5em;
+}
+
+// --------------------------------------------------------utility classes
+
+.even-columns {
+  display: flex;
+  gap: 3rem;
+}
+
+.even-columns > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center > * {
+  margin-inline: auto;
+}
+
+.page-title {
+  font-family: var(--ff-500);
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+
+  max-width: 25ch;  
+  line-height: 1;
+}
+
+.subtitle {
+  font-family: var(--ff-500);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
 // --------------------------------------------------------general styling
@@ -95,7 +131,7 @@ main {
 }
 
 [class*=__container] {
-  max-width: 70vw;
+  max-width: 60vw;
   margin: 0 auto;
   padding: 1.2em;
 }
@@ -150,6 +186,25 @@ main {
 
 
 // --------------------------------------------------------intro 
+
+.intro__content {
+
+  .intro__title {
+    align-items: flex-start; 
+
+    > p:first-of-type {
+      color: var(--clr-accent);
+      font-size: var(--fs-400);
+    }
+  }
+
+  .intro--big-title {
+    margin-top: .8em;
+    margin-bottom: 3em;
+  }
+
+}
+
 .form-wrapper {
   @include color-scheme(var(--clr-accent), var(--clr-text));
   padding: 3em 1.8em;
@@ -176,38 +231,3 @@ main {
 }
 
 
-// utility classes
-
-.even-columns {
-  display: flex;
-  gap: 3rem;
-}
-
-.even-columns > * {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text-center > * {
-  margin-inline: auto;
-}
-
-.page-title {
-  font-family: var(--ff-500);
-  font-size: var(--fs-900);
-  font-weight: var(--fw-bold);
-
-  max-width: 25ch;
-  margin-block: 4rem 1.5rem;
-  line-height: 1;
-}
-
-.subtitle {
-  font-family: var(--ff-500);
-  font-size: var(--fs-700);
-  font-weight: var(--fw-bold);
-  line-height: 1;
-  letter-spacing: 2px;
-}
