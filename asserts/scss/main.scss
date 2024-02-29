@@ -131,9 +131,16 @@ main {
 }
 
 [class*=__container] {
-  max-width: 60vw;
+  max-width: 70vw;
   margin: 0 auto;
   padding: 1.2em;
+}
+
+@include mq(medium) {
+  [class*=__container] {
+    max-width: 60vw;
+
+  }
 }
 
 // --------------------------------------------------------header
@@ -199,7 +206,6 @@ main {
   }
 
   .intro--big-title {
-    margin-top: .8em;
     margin-bottom: 3em;
   }
 
@@ -207,24 +213,45 @@ main {
 
 .form-wrapper {
   @include color-scheme(var(--clr-accent), var(--clr-text));
-  padding: 3em 1.8em;
+  padding: 3em 1.8em 1em 1.8em;
   max-width: 370px;
   align-self: flex-end;
 
-  .intro__form > p,
+  .intro__form > p {
+    color: var(--clr-bg);
+    font-size: var(--fs-300);
+    margin-bottom: 1.2em;
+  }
+  
   .form-item span {
     color: var(--clr-bg);
     font-size: var(--fs-300);
   }
 
+
   .form-item {
   display: grid;
   margin-bottom: .8em;
+  }
+
+  .form-item input[type="submit"] {
+    background-color: var(--clr-accent);
+    margin-bottom: 1.5em;
+
+    &:hover {
+      background-color: rgb(223 88 91);
+      color: var(--clr-bg);
+    }
   }
   
   .intro_socials {
     display: flex;
     gap: 1em;
+
+    i {
+      color: var(--clr-bg);
+      font-size: var(--fs-400);
+    }
   }
 
 

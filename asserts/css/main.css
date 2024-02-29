@@ -113,11 +113,16 @@ main {
 }
 
 [class*=__container] {
-  max-width: 60vw;
+  max-width: 70vw;
   margin: 0 auto;
   padding: 1.2em;
 }
 
+@media only screen and (min-width: 768px) {
+  [class*=__container] {
+    max-width: 60vw;
+  }
+}
 .intro__container .logo {
   align-items: flex-start;
   gap: 0.5em;
@@ -161,18 +166,21 @@ main {
   font-size: var(--fs-400);
 }
 .intro__content .intro--big-title {
-  margin-top: 0.8em;
   margin-bottom: 3em;
 }
 
 .form-wrapper {
   background-color: var(--clr-text);
   color: var(--clr-accent);
-  padding: 3em 1.8em;
+  padding: 3em 1.8em 1em 1.8em;
   max-width: 370px;
   align-self: flex-end;
 }
-.form-wrapper .intro__form > p,
+.form-wrapper .intro__form > p {
+  color: var(--clr-bg);
+  font-size: var(--fs-300);
+  margin-bottom: 1.2em;
+}
 .form-wrapper .form-item span {
   color: var(--clr-bg);
   font-size: var(--fs-300);
@@ -181,7 +189,19 @@ main {
   display: grid;
   margin-bottom: 0.8em;
 }
+.form-wrapper .form-item input[type=submit] {
+  background-color: var(--clr-accent);
+  margin-bottom: 1.5em;
+}
+.form-wrapper .form-item input[type=submit]:hover {
+  background-color: #df585b;
+  color: var(--clr-bg);
+}
 .form-wrapper .intro_socials {
   display: flex;
   gap: 1em;
+}
+.form-wrapper .intro_socials i {
+  color: var(--clr-bg);
+  font-size: var(--fs-400);
 }
