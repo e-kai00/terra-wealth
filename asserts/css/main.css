@@ -58,18 +58,25 @@ form textarea {
 header {
   margin-top: 3em;
   margin-bottom: 5em;
-}
-
-.even-columns {
   display: flex;
-  gap: 3rem;
 }
 
-.even-columns > * {
+header > * {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.even-columns {
+  display: grid;
+  gap: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
 
 .text-center > * {
@@ -90,6 +97,15 @@ header {
   font-weight: var(--fw-bold);
   line-height: 1;
   letter-spacing: 2px;
+}
+
+.socials {
+  display: flex;
+  gap: 1em;
+}
+.socials i {
+  color: var(--clr-bg);
+  font-size: var(--fs-400);
 }
 
 body {
@@ -113,12 +129,12 @@ main {
 }
 
 [class*=__container] {
-  max-width: 70vw;
+  max-width: 95vw;
   margin: 0 auto;
   padding: 1.2em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   [class*=__container] {
     max-width: 60vw;
   }
@@ -197,14 +213,6 @@ main {
   background-color: #df585b;
   color: var(--clr-bg);
 }
-.form-wrapper .intro_socials {
-  display: flex;
-  gap: 1em;
-}
-.form-wrapper .intro_socials i {
-  color: var(--clr-bg);
-  font-size: var(--fs-400);
-}
 
 .details__container .details__item p {
   margin-block: 0.7em;
@@ -219,4 +227,16 @@ main {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 15px;
+}
+
+footer {
+  background-color: var(--clr-text);
+  color: var(--clr-bg);
+}
+footer h2,
+footer a {
+  color: var(--clr-accent);
+}
+footer .footer__about p:last-of-type {
+  margin-block: 1em;
 }
