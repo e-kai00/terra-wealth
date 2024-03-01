@@ -205,3 +205,18 @@ main {
   color: var(--clr-bg);
   font-size: var(--fs-400);
 }
+
+.details__container .details__item p {
+  margin-block: 0.7em;
+}
+.details__container .details__item:nth-child(2) > p {
+  align-self: flex-start;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+}
+.details__container table {
+  table-layout: auto;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
