@@ -232,6 +232,7 @@ main {
 footer {
   background-color: var(--clr-text);
   color: var(--clr-bg);
+  padding-block: 2em;
 }
 footer h2,
 footer a {

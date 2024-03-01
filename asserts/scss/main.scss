@@ -309,6 +309,7 @@ main {
 
 footer {
   @include color-scheme(var(--clr-bg), var(--clr-text));
+  padding-block: 2em;
   
   h2,
   a {
