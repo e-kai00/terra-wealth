@@ -379,6 +379,10 @@ section:not(:first-child) {
     justify-items: center;
     gap: 1em;
 
+    p {
+      font-size: var(--fs-300);
+    }
+
     .icon--bg {
       background-color: var(--clr-neutral); 
       width: 100px;
@@ -417,7 +421,7 @@ section:not(:first-child) {
 footer {
   @include color-scheme(var(--clr-bg), var(--clr-text));
   padding-block: 2em;
-  margin-top: 4em;
+  margin-top: 6em;
   
   h2,
   a {
