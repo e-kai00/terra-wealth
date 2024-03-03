@@ -18,15 +18,7 @@
   @each $font-size, $value in $font-sizes {
     --fs-#{$font-size}: #{$value};
    }
-
-  //  --ff-body: var(--ff-400);
-  //  --ff-heading: var(--ff-500);
-
-  //  --fs-body: var(--fs-400);
-  //  --fs-primary-heading: var(--ff-600);
-  //  --fs-sub-heading: var(--fs-500);
-  //  --fs-large-heading: var(--800);
-  //  --fs-title: var(--900);
+  
 }
 
 *,
@@ -157,15 +149,24 @@ main {
   flex: 1 1 auto;
 }
 
+section:not(:first-child) {
+  margin-top: 3em;
+}
+
 [class*=__container] {
   max-width: 95vw;
   margin: 0 auto;
   padding: 1.2em;
 }
-
-@include mq(large) {
+@include mq(small) {
   [class*=__container] {
-    max-width: 60vw;
+    max-width: 90vw;
+  }
+}
+
+@include mq(extra-large) {
+  [class*=__container] {
+    max-width: 65vw;
 
   }
 }
@@ -224,12 +225,7 @@ main {
 .intro__content {
 
   .intro__title {
-    align-items: flex-start; 
-
-    // > p:first-of-type {
-    //   color: var(--clr-accent);
-    //   font-size: var(--fs-400);
-    // }
+    align-items: flex-start;     
   }
 
   .intro--big-title {
@@ -242,7 +238,11 @@ main {
   @include color-scheme(var(--clr-accent), var(--clr-text));
   padding: 3em 1.8em 1em 1.8em;
   max-width: 370px;
-  align-self: flex-end;
+  justify-self: center;
+
+  @include mq(medium) {
+    justify-self: end;
+  }
 
   .intro__form > p {
     color: var(--clr-bg);
@@ -277,6 +277,21 @@ main {
 
 .details__container {
 
+  @include mq(medium) {
+    .details__item:nth-child(2) {
+      margin-left: 2em;
+    }
+  }
+
+  @include mq(large) {
+    .details__item:nth-child(2) {
+      margin-left: 2em;
+    }
+    .even-columns:has(.details__item) {
+      grid-auto-columns: 1.5fr 1fr;
+    }
+  }
+
   .details__item p {
     margin-bottom: .7em;
   }
@@ -299,6 +314,10 @@ main {
 
 .explore__container {
 
+  .explore__item:nth-child(2) {
+    margin-top: 4em;
+  }
+
   .explore__icon {
     display: grid;
     justify-items: center;
@@ -311,6 +330,18 @@ main {
       display: flex;
       justify-content: center; 
       align-items: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 6px solid var(--clr-accent);
+        position: absolute;
+        top: -14px;
+        left: -14px;
+        z-index: -1;
+      }
   
       svg {
         fill: var(--clr-accent);
@@ -324,11 +355,16 @@ main {
 footer {
   @include color-scheme(var(--clr-bg), var(--clr-text));
   padding-block: 2em;
-  margin-top: 2em;
+  margin-top: 4em;
   
   h2,
   a {
     color: var(--clr-accent);
+  }
+
+  .footer__container {
+    align-items: end;
+    justify-items: end;
   }
 
   .footer__about p:last-of-type {    
