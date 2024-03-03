@@ -73,6 +73,11 @@ header > * {
   align-items: center;
 }
 
+iframe {
+  height: 300px;
+  width: 100vw;
+}
+
 // --------------------------------------------------------utility classes
 
 .even-columns {
@@ -402,21 +407,4 @@ footer {
 }
 
 
-// .map-wrappper {
-//   width: 100vw;
-//   position: relative;
 
-//   iframe {
-//     position: absolute;
-//     inset: 0;
-//   }
-// }
-
-iframe {
-  height: 300px;
-  width: 100vw;
-}
-
-// .jarallax {
-//   height: 80vh;
-// }

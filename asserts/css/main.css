@@ -68,6 +68,11 @@ header > * {
   align-items: center;
 }
 
+iframe {
+  height: 300px;
+  width: 100vw;
+}
+
 .even-columns {
   display: grid;
   gap: 3rem;
@@ -333,9 +338,4 @@ footer .footer__container {
 }
 footer .footer__about p:last-of-type {
   margin-block: 1em;
-}
-
-iframe {
-  height: 300px;
-  width: 100vw;
 }
