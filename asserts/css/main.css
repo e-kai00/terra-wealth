@@ -126,6 +126,14 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+section.appear {
+  opacity: 1;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
