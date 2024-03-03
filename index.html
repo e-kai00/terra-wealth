@@ -13,8 +13,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
     <link rel="stylesheet" href="asserts/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet" />
     <title>Terra Wealth</title>
 </head>
 
@@ -23,6 +23,7 @@
 
         <main>
             <section class="intro">
+
                 <div class="intro__container">
                     <header>
                         <div class="logo">
@@ -36,7 +37,12 @@
                             <p>1-000-000-000</p>
                         </div>
                     </header>
+                </div>
 
+                <div class="jarallax">
+                <img class="jarallax-img" src="asserts/images/interior.jpg" alt="" />
+
+                <div class="intro__container">
                     <div class="intro__content even-columns">
                         <div class="intro__title">
                             <p class="accent-text">Luxury Appartment</p>
@@ -45,48 +51,48 @@
                                 <p class="page-title">Wealth</p>
                             </div>
                             <p>
-                                I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you
+                                I'm a paragraph. Click here to add your own text and edit me. I’m a great place for
+                                you
                                 to tell a story and let your users know a little more about you.
                             </p>
                         </div>
 
-                        <!-- <div> -->
-                            <div class="form-wrapper">
-                                <form class="intro__form">
-                                    <h2 class="subtitle">Your New Home Awaits</h2>
-                                    <p>Contact us to get the best offer from our agents!</p>
+                        <div class="form-wrapper">
+                            <form class="intro__form">
+                                <h2 class="subtitle">Your New Home Awaits</h2>
+                                <p>Contact us to get the best offer from our agents!</p>
 
-                                    <div class="form-item">
-                                        <label for="name">First Name <span>*</span> </label>
-                                        <input type="text" name="firstName" id="name" required>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for="name">Last Name <span>*</span> </label>
-                                        <input type="text" name="lastName" id="name" required>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for="email">Enter your email <span>*</span> </label>
-                                        <input type="email" name="email" id="email" required>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for="message">Message <span>*</span></label>
-                                        <textarea id="message" name="message" rows="5" cols="33">
+                                <div class="form-item">
+                                    <label for="name">First Name <span>*</span> </label>
+                                    <input type="text" name="firstName" id="name" required>
+                                </div>
+                                <div class="form-item">
+                                    <label for="name">Last Name <span>*</span> </label>
+                                    <input type="text" name="lastName" id="name" required>
+                                </div>
+                                <div class="form-item">
+                                    <label for="email">Enter your email <span>*</span> </label>
+                                    <input type="email" name="email" id="email" required>
+                                </div>
+                                <div class="form-item">
+                                    <label for="message">Message <span>*</span></label>
+                                    <textarea id="message" name="message" rows="5" cols="33">
                                 </textarea>
-                                    </div>
-                                    <div class="form-item">
-                                        <input type="submit" value="Contact Us Now!">
-                                    </div>
-                                </form>
+                                </div>
+                                <div class="form-item">
+                                    <input type="submit" value="Contact Us Now!">
+                                </div>
+                            </form>
 
-                                <ul class="intro_socials socials">
-                                    <li><i class="bi bi-facebook"></i></li>
-                                    <li><i class="bi bi-twitter-x"></i></li>
-                                </ul>
-                            </div>
-                        <!-- </div> -->
-
+                            <ul class="intro_socials socials">
+                                <li><i class="bi bi-facebook"></i></li>
+                                <li><i class="bi bi-twitter-x"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+
             </section>
 
             <section class="details">
@@ -144,12 +150,18 @@
 
             <section class="location">
                 <!-- google map -->
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.949403986278!2d-74.00966612062432!3d40.721183482946984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f5752f3357%3A0xdce7855868cab0b2!2s60%20Beach%20St%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e0!3m2!1sen!2sde!4v1677952906610!5m2!1sen!2sde"
+                        height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </section>
 
             <section class="explore">
                 <div class="explore__container">
                     <div class="explore__item">
-                        <p class="accent-text">Terra Welth Real Estate</p>
+                        <p>T. W. Real Estate</p>
                         <h2 class="subtitle title-space">FIND YOUR DREAM HOME</h2>
                     </div>
                     <div class="explore__item">
@@ -226,10 +238,19 @@
         </footer>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="asserts/js/script.js"></script>
+
+    <!-- Init Jarallax -->
+    <script type="text/javascript">
+        jarallax(document.querySelectorAll(".jarallax"));
+        // jarallax(document.querySelectorAll('.jarallax'), {
+        //     speed: 0.2,
+        // });
+    </script>
 </body>
 
 </html>
